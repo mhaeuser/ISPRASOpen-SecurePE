@@ -1,5 +1,5 @@
 /** @file
-  Implements APIs to perform safe overflow-aware arithmetics.
+  Implements APIs to perform safe overflow-aware arithmetic.
 
   Copyright (c) 2020, Marvin Häuser. All rights reserved.<BR>
   Copyright (c) 2020, Vitaly Cheptsov. All rights reserved.<BR>

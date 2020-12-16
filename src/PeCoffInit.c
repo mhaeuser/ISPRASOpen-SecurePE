@@ -752,7 +752,7 @@ InternalInitializeTe (
   //
   STATIC_ASSERT (
     MAX_UINT8 * sizeof (EFI_IMAGE_SECTION_HEADER) <= MAX_UINT32 - MAX_UINT16,
-    "The following arithmetics may overflow"
+    "The following arithmetic may overflow."
     );
 
   /*@ assigns Context->SizeOfHeaders;
@@ -1338,7 +1338,7 @@ InternalInitializePe (
 
   STATIC_ASSERT (
     sizeof (EFI_IMAGE_DATA_DIRECTORY) <= MAX_UINT32 / EFI_IMAGE_NUMBER_OF_DIRECTORY_ENTRIES,
-    "These arithmetics may overflow."
+    "The following arithmetic may overflow."
     );
   //
   // Context->ExeHdrOffset + sizeof (EFI_IMAGE_NT_HEADERS_COMMON_HDR) cannot overflow because
@@ -1418,7 +1418,7 @@ InternalInitializePe (
 
   STATIC_ASSERT (
     sizeof (EFI_IMAGE_SECTION_HEADER) <= (MAX_UINT32 + 1ULL) / (MAX_UINT16 + 1ULL),
-    "These arithmetics may overflow."
+    "The following arithmetic may overflow."
     );
 
   /*@ assigns Result, MinSizeOfHeaders;
