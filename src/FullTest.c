@@ -130,6 +130,7 @@ PeCoffTestRtReloc (
   @          \valid (Sections + (0 .. NumberOfSections - 1));
   @
   @ assigns ((char *) Destination)[0 .. DestinationSize - 1];
+  @ assigns *(EFI_IMAGE_BASE_RELOCATION_BLOCK *) (((char *) Destination + align_up (pointer_to_address (Destination), Context->SectionAlignment) - pointer_to_address (Destination)) + Context->RelocDirRva);
   @ assigns Context->ImageBuffer;
   @ assigns Context->RelocDirRva;
   @ assigns Context->RelocDirSize;
@@ -198,6 +199,7 @@ PeCoffTestLoad (
   /*@ assigns ((char *) Destination)[0 .. DestinationSize - 1];
     @ assigns Context->RelocDirRva;
     @ assigns Context->RelocDirSize;
+    @ assigns *(EFI_IMAGE_BASE_RELOCATION_BLOCK *) (((char *) Destination + align_up (pointer_to_address (Destination), Context->SectionAlignment) - pointer_to_address (Destination)) + Context->RelocDirRva);
   */
   PeCoffDiscardSections (Context);
 
@@ -207,6 +209,7 @@ PeCoffTestLoad (
 /*@ requires \typeof(FileBuffer) <: \type(char *);
   @ requires pointer_max_aligned(FileBuffer);
   @ requires \valid((char *) FileBuffer + (0 .. FileSize - 1));
+  @ assigns \nothing;
 */
 RETURN_STATUS
 PeCoffTestLoadFull (
@@ -278,6 +281,7 @@ PeCoffTestLoadFull (
     @ assigns Context.ImageBuffer;
     @ assigns Context.RelocDirRva;
     @ assigns Context.RelocDirSize;
+    @ assigns *(EFI_IMAGE_BASE_RELOCATION_BLOCK *) (((char *) Destination + align_up (pointer_to_address (Destination), Context.SectionAlignment) - pointer_to_address (Destination)) + Context.RelocDirRva);
   */
   Status = PeCoffTestLoad (&Context, Destination, DestinationSize);
 

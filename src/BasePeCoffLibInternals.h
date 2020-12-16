@@ -328,8 +328,6 @@ typedef enum {
   @ }
 */
 
-typedef UINTN RETURN_STATUS;
-
 ///
 /// Image context structure used for abstraction and bookkeeping.
 /// This structure is publicly exposed for memory allocation reasons and must
