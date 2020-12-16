@@ -1,4 +1,8 @@
-*.av
+*.jc
+*.cloc
+*.makefile
+*.mlw
+*.bak
 *.pp.c
 *.pp.h
 *.gcda
