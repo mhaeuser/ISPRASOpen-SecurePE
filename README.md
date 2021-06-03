@@ -10,4 +10,4 @@ is used as the deductive verification tool.
 
 ### Papers
 
-Marvin Häuser, Vitaly Cheptsov, (2020) Securing the EDK II Image Loader, Ivannikov Ispras Open Conference (ISPRAS), Moscow, Russia, 2020. [[ArXiv PDF]](https://arxiv.org/abs/2012.05471)
+M. Häuser and V. Cheptsov, "Securing the EDK II Image Loader," 2020 Ivannikov Ispras Open Conference (ISPRAS), 2020, pp. 16-25, DOI: [0.1109/ISPRAS51486.2020.00010](https://doi.org/10.1109/ISPRAS51486.2020.00010). [[ArXiv preprint]](https://arxiv.org/abs/2012.05471)
