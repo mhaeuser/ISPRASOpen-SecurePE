@@ -14,5 +14,5 @@ M. Häuser and V. Cheptsov, "Securing the EDK II Image Loader," 2020 Ivannikov I
 
 
 ### Errata
-* The publication has incorrectly defined $A\_MAX = 4$ for the IA32 architecture. The correct definition is $A\_MAX = 8$. This furthermore implies that $\_Alignof(UINT64) = 8$ for IA32 architectures. This does not affect the result of the verification.
-* The code snapshot has incorrectly defined $RelocsStripped = (TeHdr->DataDirectory[0].Size > 0)$ for TE Images. The correct definition is $RelocsStripped = (TeHdr->DataDirectory[0].Size == 0)$. This bug effectively prevents the Image relocation of TE Images. This does not affect the safety or well-defined behaviour of the code snapshot.
+* The publication has incorrectly defined `A_MAX = 4` for the IA32 architecture. The correct definition is `A_MAX = 8`. This furthermore implies that `_Alignof(UINT64) = 8` for IA32 architectures. This does not affect the result of the verification.
+* The code snapshot has incorrectly defined `RelocsStripped = (TeHdr->DataDirectory[0].Size > 0)` for TE Images. The correct definition is `RelocsStripped = (TeHdr->DataDirectory[0].Size == 0)`. This bug effectively prevents the Image relocation of TE Images. This does not affect the safety or well-defined behaviour of the code snapshot.
